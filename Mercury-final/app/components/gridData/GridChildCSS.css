@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+.mPayFeatureOne .asset, 
+.mPayFeatureTwo .asset, 
+.mPayFeatureThree .asset,
+.advisoryTag .asset,
+.techonologyTag .asset,
+.businessOperationsTag .asset,
+.memberManagementTag .asset,
+.riskManagementTag .asset {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mPayFeatureOne .asset img, 
+.mPayFeatureTwo .asset img, 
+.mPayFeatureThree .asset img, 
+.advisoryTag img,
+.techonologyTag img,
+.businessOperationsTag img,
+.memberManagementTag img,
+.riskManagementTag img,
+.determination img,
+.empathy img,
+.agility img,
+.diversity img {
+    width: 70px;
+    height: 70px;
+}
+
+.mPayFeatureOne, 
+.mPayFeatureTwo, 
+.mPayFeatureThree,
+.advisoryTag,
+.techonologyTag,
+.businessOperationsTag,
+.memberManagementTag,
+.riskManagementTag {
+    height: 540px;
+    border-radius: 30px;
+}
+
+.patternPosition {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.advisoryTag,
+.techonologyTag,
+.businessOperationsTag,
+.memberManagementTag,
+.riskManagementTag {
+    font-size: 34px;
+    line-height: 41px;
+}
+
+.sectionBackgroundCP {
+    transform-origin: 100% 0;
+    transform: skewY(-6deg);
+    background-color: #f4f4f4;
+}
+
+@media only screen and (max-width: 990px){
+    .advisoryTag,
+    .techonologyTag,
+    .businessOperationsTag,
+    .memberManagementTag,
+    .riskManagementTag {
+        font-size: 24px;
+        line-height: 31px;
+    }
+}
+
+@media only screen and (max-width: 1279px){
+    .mPayFeatureOne, 
+    .mPayFeatureTwo, 
+    .mPayFeatureThree,
+    .advisoryTag,
+    .techonologyTag,
+    .businessOperationsTag,
+    .memberManagementTag,
+    .riskManagementTag {
+        height: -webkit-fill-available !important;
+    }
+}
+
+.mHubGridSection {
+    max-width: 1180px !important;
+}
+
+.featureCheckList .checkbox-list-img-container img {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1280px) and (max-width: 2000px){
+    .mHubGridSectionGridContainer {
+        gap: 1.25rem !important;
+    }
+}
+
+.mHubFeaturesHeading {
+    align-self: flex-start;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+}
+
+.peopleManagementGrid .asset img {
+    border-radius: 20px;
+}
+
+.peopleManagementGrid .socialMediaIconContainer {
+    width: 30px;
+    height: 30px;
+}
+
+.peopleManagementGrid {
+    max-width: 300px;
+}
+
+.peopleContainer .asset {
+    max-height: 270px;
+    border-radius: 20px !important;
+    overflow: hidden;
+}
+
+.peopleContainer h3 {
+    font-size: 24px !important;
+    line-height: 30px !important;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.peopleContainer h4 {
+    font-size: 20px !important;
+    font-weight:500;
+}
+
+.peopleContainer .asset img:hover, .peopleManagementGrid .asset img:hover, .mercury-map-image:hover {
+    scale: 1.1;
+}
+
+.peopleManagementGrid .asset {
+    border-radius: 20px;
+}
+
+.basharBrief h3 {
+    font-size: 30px !important;
+    line-height: 38px !important;
+    font-weight: normal !important;
+}
+
+.basharBrief h4 {
+    font-size: 30px !important;
+    line-height: 38px !important;
+    font-weight: bold !important;
+}
+
+.basharBrief p {
+    font-size: 20px !important;
+    line-height: 24px !important;
+}
+
+.networkOne {
+    position: relative;
+    border-radius: 16px;
+    background-color: white;
+}
+
+.networkOne h2 {
+    font-weight: bold;
+}
+
+.peopleContainer p {
+    font-weight: 300;
+}
+
+.networkOne::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    margin: -4px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, #B100C0 0%, #0048D3 100%);
+    border-radius: 20px;
+}
+
+.sectionContainer:hover .filled-button {
+    scale: 1.2;
+    animation-delay: 1s;
+    -o-animation-duration: 2s;
+    margin-left: 15px;
+    animation: all ease-in-out;
+}
+
+/* .bgHoverAnimation {
+    background: linear-gradient(233deg, #DAF0EA, #CDE4D8, #E3F0E9);
+    width: 100%;
+    background-size: cover;
+    background-blend-mode: multiply;
+    -webkit-animation: hue-rotate 3s linear infinite;
+            animation: hue-rotate 3s linear infinite;
+  }
+  
+  @-webkit-keyframes hue-rotate {
+    from {
+      -webkit-filter: hue-rotate(0);
+      -moz-filter: hue-rotate(0);
+      -ms-filter: hue-rotate(0);
+      filter: hue-rotate(0);
+    }
+    to {
+      -webkit-filter: hue-rotate(360deg);
+      -moz-filter: hue-rotate(360deg);
+      -ms-filter: hue-rotate(360deg);
+      filter: hue-rotate(360deg);
+    }
+  }
+  
+  @keyframes hue-rotate {
+    from {
+      -webkit-filter: hue-rotate(0);
+      -moz-filter: hue-rotate(0);
+      -ms-filter: hue-rotate(0);
+      filter: hue-rotate(0);
+    }
+    to {
+      -webkit-filter: hue-rotate(360deg);
+      -moz-filter: hue-rotate(360deg);
+      -ms-filter: hue-rotate(360deg);
+      filter: hue-rotate(360deg);
+    }
+  } */
+
+  /* .mPayHeroImage:hover, .mTouchHeroImage:hover, .m360HeroImage:hover, .mHubHeroImage:hover {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='40'><rect rx='20' width='100%' height='100%' fill='black' /><text x='50%' y='50%' font-family='sans-serif' font-weight='bold' font-size='14' dominant-baseline='middle' text-anchor='middle' fill='white'>Learn More</text></svg>") 16 0, auto !important;
+  } */
+
+.peopleContainer .text-paragraph {
+    font-size: 19px;
+    line-height: 28px;
+}
+
+.featureSection {
+    min-height: 490px;
+}
+
+.mPayCard1, .mPayCard2 {
+    min-height: 310px;
+}
+
+.peopleManagementGrid .asset {
+    overflow: hidden;
+    max-height: 300px;
+}
+
+@media only screen and (max-width: 1366px){
+    .peopleManagementGrid .asset {
+        max-height: 250px;
+    }
+    .peopleManagementGrid {
+        max-width: 250px;
+    }
+}
+
+.productsandservices .asset {
+    max-width: fit-content;
+    height: 160px;
+    overflow: hidden;
+}
+
+.mPayBrief .asset, .mTouchBrief .asset, .m360Brief .asset, .mHubPageBrief .asset {
+    max-width: fit-content;
+    height: 220px;
+    overflow: hidden;
+}
+
+.productsandservices {
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* .mtouch .asset {
+    max-width: 240px !important;
+}
+
+.m360 .asset {
+    max-width: 154px !important;
+}
+
+.mhub .asset {
+    max-width: 220px !important;
+} */
+
+.mpay, .m360, .mhub, .mtouch {
+    height: 360px !important;
+}
+
+.mpay .asset, .m360 .asset, .mtouch .asset, .mhub .asset {
+    margin: 0 auto;
+}
+
+.m360 .asset, .mhub .asset {
+    max-width: 45% !important;
+}
+
+.mtouch .asset {
+    max-width: 80% !important;
+}
+
+.mpay .asset {
+    max-width: 63% !important;
+}
+
+/* .muzaffarKhokhar p, .sanjeev p, .jun p {
+    height: 64px;
+} */
+
+.aboutMercury .asset img {
+    width: 220px;
+    height: 80px;
+}
+
+.aboutMercury .asset {
+    margin-top: -10px;
+}
+
+.mPayHeroImage .asset, .mTouchHeroImage .asset, .m360HeroImage .asset, .mHubHeroImage .asset {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.companyHeroText {
+    font-size: 30px;
+    line-height: 48px;
+}
+
+@media only screen and (max-width: 554px){
+    .mPayBrief .asset, .mTouchBrief .asset, .m360Brief .asset, .mHubPageBrief .asset {
+        height: 120px;
+    }
+
+    .text-h4 {
+        font-size: 20px;
+        line-height: 32px;
+    }
+}
+
+@media only screen and (max-width: 709px){
+    .aboutMercury .asset img, .aboutMercury .socialMediaMainContainer {
+        margin: 0 auto;
+    }
+}
+
+.CareersAtMercury p {
+    max-width: 1024px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.image-position-left img {
+    object-position: left;
+}
