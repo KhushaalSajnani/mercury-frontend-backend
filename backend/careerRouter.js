@@ -16,8 +16,10 @@ try {
     let config = {
         service: 'gmail',
         auth: {
-            user: 'ksajnani2000@gmail.com',
-            pass: 'jwtvjjtgzayyovyd'
+            /*user: 'ksajnani2000@gmail.com',
+            pass: 'jwtvjjtgzayyovyd'*/
+            user: 'mercurypayportal@gmail.com',
+            pass: 'ldtikglcwjouiums'
         }
     }
 
@@ -30,6 +32,7 @@ try {
         }
     });
 
+    let cover = "Cover Letter: "
     let response = {
         body: {
             name: 'Mercury Team',
@@ -40,20 +43,21 @@ try {
                         Name: name,
                         Email: email,
                         Contact: phone,
-                        'Cover Letter': coverletter,
+                        // 'Cover Letter': "Cover Letter Written in the end",
                         Resume: file? 'Resume Attached':'No Attachment'
                     }
-                ]
+                ],
             },
-            intro: "We have a new update from our Website!"
+            intro: "We have a new update from our Website!",
+            outro: `${cover.bold()} ${coverletter?coverletter:"No Cover Letter"}`
         }
     }
     let mail = MailGenerator.generate(response)
 
     let message = {
-        from: 'ksajnani2000@gmail.com',
-        to: 'ksajnani2000@gmail.com',
-        subject: "Testing Email",
+        from: 'mercurypayportal@gmail.com',
+        to: 'Careers@mercury-pay.com',
+        subject: "Mercury-Pay - Join Us Interest Received",
         attachments: file? [{filename: file.originalname, content: file.buffer}]: [],
         html: mail
     };

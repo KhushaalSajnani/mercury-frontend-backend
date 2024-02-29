@@ -10,12 +10,23 @@ contactRouter.post('/',(req,res)=>{
         let config = {
             service: 'gmail',
             auth: {
-                user: 'ksajnani2000@gmail.com',
-                pass: 'jwtvjjtgzayyovyd'
-            }
+                user: 'mercurypayportal@gmail.com',
+                pass: 'jbyhlrawjiogglsh'
+            },
+            from: 'mercurypayportal@gmail.com'
         }
 
-        let transporter = nodemailer.createTransport(config);
+        // let transporter = nodemailer.createTransport(config);
+        let transporter = nodemailer.createTransport({
+            host: 'smtp.gmail.com',
+            port: 465,
+            secure: true,
+            auth:{
+                user: 'mercurypayportal@gmail.com',
+                pass: 'jbyhlrawjiogglsh'
+            },
+            from: 'mercurypayportal@gmail.com'
+        });
         let MailGenerator = new Mailgen({
             theme: "default",
             product: {
@@ -23,7 +34,7 @@ contactRouter.post('/',(req,res)=>{
                 link: 'https://mercury-pay.com'
             }
         });
-
+        let desc = "Description of Query:"
         let response = {
             body: {
                 name: 'Mercury Team',
@@ -34,23 +45,26 @@ contactRouter.post('/',(req,res)=>{
                             Email: email,
                             Contact: phoneNumber,
                             'Product/Service': enquiryFor,
-                            Description: enquiryDescription
+                            // Description: enquiryDescription
                         }
                     ]
                 },
-                intro: "We have a new update from our Website!"
+                intro: "We have a new update from our Website!",
+                outro: `${desc.bold()} ${enquiryDescription?enquiryDescription:"No Cover Letter"}`
             }
         }
         let mail = MailGenerator.generate(response)
 
         let message = {
-            from: 'ksajnani2000@gmail.com',
-            to: 'ksajnani2000@gmail.com',
-            subject: "Testing Email",
+            from: '"MercuryPayPortal" <mercurypayportal@gmail.com>',
+            to: 'info@mercury-pay.com',
+            subject: `Mercury-Pay Enquiry For ${enquiryFor}`,
+            text:'You are receiving this email because we have received a new query on Mercury-Pay!',
             html: mail
         };
 
         transporter.sendMail(message).then(() => {
+            console.log('Success')
             return res.status(201).json({
                 msg: "you should receive an email"
             })

@@ -126,7 +126,7 @@ const ContactPageForm: React.FC = () => {
       headers: {'content-type':'application/json'},
       body: JSON.stringify(bodyData)
     });*/
-    const response = await fetch('http://localhost:3001/contact-us-page/',{
+    const response = await fetch('http://localhost:3001/contact/',{
       method: 'POST',
       headers: {'content-type':'application/json'},
       body: JSON.stringify(bodyData)
