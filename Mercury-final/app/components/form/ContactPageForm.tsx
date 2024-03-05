@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import 'react-phone-input-2/lib/style.css';
-import PhoneInput from 'react-phone-input-2';
+import PhoneInput from 'react-phone-input-2'
 import './contactUsFormCSS.css';
 
 const ContactPageForm: React.FC = () => {
@@ -40,7 +40,7 @@ const ContactPageForm: React.FC = () => {
     setEnquiryDescription(event.target.value);
   };
 
-  const handleSubmit = async (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const bodyData = {name, email, phoneNumber,enquiryFor, enquiryDescription}
     /*const response = await fetch('/api/emailApi',{
@@ -48,14 +48,16 @@ const ContactPageForm: React.FC = () => {
       headers: {'content-type':'application/json'},
       body: JSON.stringify(bodyData)
     });*/
-    const response = await fetch('http://localhost:3000/api/contact-us-form-api/',{
+    const response = await fetch('/contact',{
       method: 'POST',
       headers: {'content-type':'application/json'},
       body: JSON.stringify(bodyData)
     });
     if(response.status === 201){
       alert('Success! Your enquiry is received by Mercury-Pay')
-      location.reload();
+      //location.reload();
+    }else{
+      alert('Sad, the request did not processed' );
     }
   }
 

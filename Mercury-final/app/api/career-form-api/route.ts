@@ -4,11 +4,11 @@ import multer from "multer"
 import * as nc from 'next-connect';
 
 
-export const config = {
-    api: {
-        bodyParser: false,
-    },
-};
+// export const config = {
+//     api: {
+//         bodyParser: false,
+//     },
+// };
 
 
 const upload = multer();
@@ -18,7 +18,8 @@ export async function GET(){
 
 export const POST =async (req: NextRequest) =>{
     const body = await req.formData();
-    const file = body.get("file") as Blob | null;
+    // const file = body.get("file") as Blob | null; ---> working
+    const file = body.get("file") as File | null;
     const name = body.get('name');
     const email = body.get('email');
     const coverLetter = body.get('coverletter');

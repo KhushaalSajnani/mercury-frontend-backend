@@ -1,85 +1,3 @@
-/* .clientele-carousal-parent-container {
-    overflow: hidden;
-    align-items: flex-start;
-    display: flex;
-    flex-shrink: 0;
-    margin-inline: auto;
-    position: relative;
-}
-
-.clientele-horizontal-track {
-    overflow: hidden;
-    align-items: flex-start;
-    display: flex;
-    gap: 80px;
-    flex-shrink: 0;
-    align-items: center; 
-    width: fit-content;
-}
-
-.clientele-carousal-parent-container::before, .clientele-carousal-parent-container::after {
-    position: absolute;
-    top: 0;
-    width: 10%;
-    height: 100%;
-    content: "";
-    z-index: 2000;
-}
-
-.clientele-carousal-parent-container::before {
-    left: 0;
-    background: linear-gradient(to left, rgba(255,255,255, 0), white);
-}
-
-.clientele-carousal-parent-container::after {
-    right: 0;
-    background: linear-gradient(to right, rgba(255,255,255, 0), white);
-}
-
-
-
-.clientele-carousal-parent-container:hover .clientele-horizontal-track {
-    animation-play-state: paused;
-}
-
-.clientele-carousal-parent-container .Backwards {
-    animation: 60s sliding-testimonial-backwards infinite linear;
-}
-
-.clientele-carousal-parent-container .BackwardsSlow {
-    animation: sliding-testimonial-backwards 60s linear infinite;
-}
-
-.clientele-carousal-parent-container .Forwards {
-    animation: sliding-testimonial-forwards 60s linear infinite;
-}
-
-.clientele-heading {
-    font-size: 24px;
-    -webkit-font-smoothing: antialiased;
-    text-align: center;
-    padding-top: 40px;
-}
-
-.clientele-image-container {
-    margin: 0 auto;
-    width: 160px;
-    height: 100%;
-}
-
-.clientele-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-/* .clientele-scroller-item-data-container {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    overflow: hidden;
-    width: fit-content;
-} */
 
 .clientele-item-data-container:hover {
     transform: initial !important;
@@ -95,9 +13,9 @@
     width: 100%;
     height: 100%;
     background-color: rgba(255,255,255,0.4);
-    	-webkit-transition: none;
-    	   -moz-transition: none;
-    	        transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
     filter: blur(50px);
     -webkit-filter: blur(50px);
 }
@@ -106,45 +24,34 @@
     left: 110%;
     background-color: rgba(255,255,255,0);
     -webkit-transition: all 0.6s ease-in-out;
-	   -moz-transition: all 0.6s ease-in-out;
-	        transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
 }
 
-/* @keyframes sliding-testimonial-backwards {
+
+@keyframes sliding-testimonial-backwards {
     0% {
-      transform: translate3d(0, 0, 0);
+        transform: translateX(0);
     }
     100% {
-      transform: translate3d(-100%, 0, 0); 
+        transform: translateX(-100%);
     }
-  } */
+}
 
-
-  @keyframes sliding-testimonial-backwards {
+@keyframes sliding-testimonial-forwards {
     0% {
-      transform: translateX(0);
+        transform: translate3d(0, 0, 0);
     }
     100% {
-      transform: translateX(-100%); 
+        transform: translate3d(100%, 0, 0);
     }
-  }
+}
 
-  @keyframes sliding-testimonial-forwards {
-    0% {
-      transform: translate3d(0, 0, 0);
-    }
-    100% {
-      transform: translate3d(100%, 0, 0); 
-    }
-  } */
-
-  /* new Css */
-
-  .liItem {
+.liItem {
     padding: 0 20px;
-  }
+}
 
-  .ulGroup {
+.ulGroup {
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -152,44 +59,44 @@
     white-space: nowrap;
     animation: slidingBackwards 30s linear infinite;
     column-gap: 80px;
-  }
+}
 
-  .ulGroup li {
+.ulGroup li {
     width: 200px;
     height: 100%;
-  }
+}
 
-  .ulGroup li:first-child {
+.ulGroup li:first-child {
     margin-left: 80px;
-  }
+}
 
-  .ulGroup li img {
+.ulGroup li img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-  }
+}
 
-  .mainContainer {
+.mainContainer {
     width: 100%;
     margin: 0 auto;
-  }
+}
 
-  .innerContainer {
+.innerContainer {
     overflow: hidden;
     width: 100%;
     user-select: none;
     display: flex;
     margin: 0 auto;
-  }
-
-  
+}
 
 
-  @keyframes slidingBackwards {
+
+
+@keyframes slidingBackwards {
     from {
-      left: translateX(0);
+        left: translateX(0);
     }
     to {
-      transform: translateX(-100%); 
+        transform: translateX(-100%);
     }
-  }
+}

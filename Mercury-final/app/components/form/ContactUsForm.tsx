@@ -130,7 +130,7 @@ const ContactUsForm: React.FC = () => {
             Phone Number:
             <PhoneInput
               country={'ae'}
-              className="phoneNumber"
+              //className="phoneNumber"
               value={phoneNumber}
               onChange={handleChange}
               inputProps={{

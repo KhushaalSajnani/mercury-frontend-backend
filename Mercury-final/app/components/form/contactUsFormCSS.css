@@ -1,31 +1,4 @@
-/* *,  *:before,  *:after  {
-    -moz-box-sizing:  border-box;
-    -webkit-box-sizing:  border-box;
-    box-sizing:  border-box;
-}
 
-@keyframes animatedBackground  {
-    from  {
-    background-position:  0 0;
-}
-to  {
-    background-position:  100% 0;
-}
-}
-.contactUsForm  {
-    max-width:  600px;
-    margin: 10px auto;
-    padding: 40px;
-    background:  #f4f4f4;
-    border-radius:  8px;
-}
-
-a{
-	color:#fff;
-	font-weight:400;
-	text-decoration:none;
-	font-size:26px;
-} */
 
 .contactUsForm  {
     width: 100% !important;

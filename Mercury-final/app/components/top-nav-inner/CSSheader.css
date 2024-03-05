@@ -25,16 +25,11 @@ header .v-center{
 	align-items: center;
 }
 
-/* header .sm-screen-btn {
-	display: none;
-} */
+
 header .lg-screen-btn {
 	display: contents;
 }
 
-/* header .justify-space-between {
-	justify-content: space-between;
-} */
 
 header ul{
 	list-style: none;
@@ -44,7 +39,7 @@ header ul{
 header a{
 	text-decoration: none;
 }
-/* header */
+
 .header{
 	display: block;
 	width: 100%;
@@ -64,9 +59,7 @@ header a{
 	font-weight: 700;
 	text-decoration: none;
 }
-/* .header .item-center{
-	flex:0 0 66%;
-} */
+
 .header .item-right{
 	flex:0 0 17%;
 	display: flex;

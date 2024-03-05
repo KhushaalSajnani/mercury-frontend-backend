@@ -208,48 +208,7 @@
     animation: all ease-in-out;
 }
 
-/* .bgHoverAnimation {
-    background: linear-gradient(233deg, #DAF0EA, #CDE4D8, #E3F0E9);
-    width: 100%;
-    background-size: cover;
-    background-blend-mode: multiply;
-    -webkit-animation: hue-rotate 3s linear infinite;
-            animation: hue-rotate 3s linear infinite;
-  }
-  
-  @-webkit-keyframes hue-rotate {
-    from {
-      -webkit-filter: hue-rotate(0);
-      -moz-filter: hue-rotate(0);
-      -ms-filter: hue-rotate(0);
-      filter: hue-rotate(0);
-    }
-    to {
-      -webkit-filter: hue-rotate(360deg);
-      -moz-filter: hue-rotate(360deg);
-      -ms-filter: hue-rotate(360deg);
-      filter: hue-rotate(360deg);
-    }
-  }
-  
-  @keyframes hue-rotate {
-    from {
-      -webkit-filter: hue-rotate(0);
-      -moz-filter: hue-rotate(0);
-      -ms-filter: hue-rotate(0);
-      filter: hue-rotate(0);
-    }
-    to {
-      -webkit-filter: hue-rotate(360deg);
-      -moz-filter: hue-rotate(360deg);
-      -ms-filter: hue-rotate(360deg);
-      filter: hue-rotate(360deg);
-    }
-  } */
 
-  /* .mPayHeroImage:hover, .mTouchHeroImage:hover, .m360HeroImage:hover, .mHubHeroImage:hover {
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='40'><rect rx='20' width='100%' height='100%' fill='black' /><text x='50%' y='50%' font-family='sans-serif' font-weight='bold' font-size='14' dominant-baseline='middle' text-anchor='middle' fill='white'>Learn More</text></svg>") 16 0, auto !important;
-  } */
 
 .peopleContainer .text-paragraph {
     font-size: 19px;
@@ -297,17 +256,7 @@
     overflow: hidden;
 }
 
-/* .mtouch .asset {
-    max-width: 240px !important;
-}
 
-.m360 .asset {
-    max-width: 154px !important;
-}
-
-.mhub .asset {
-    max-width: 220px !important;
-} */
 
 .mpay, .m360, .mhub, .mtouch {
     height: 360px !important;

@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,24 +21,7 @@
   --contact-us-section: 232, 243, 237;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-rgb: 0, 0, 0;
-    --grid-bg-color: 36, 36, 38;
-    --btn-bg-color: 0, 0, 0;
-    --grid-card-hover-color: 46, 44, 32;
-    --grid-card-box-shadow: 0 0 15px -5px rgb(0 0 0 / 10%);
-    --video-container-box-shadow: 0 0 65px 10px rgba(255, 255, 255, 0.2);
-    --grid-section-heading-gradient: linear-gradient( -225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100% );
-    --menu-nav-box-shadow: -2px 2px 70px -25px rgba(255,255,255,0.3);
-    --btn-gradient: linear-gradient(90deg, #B100C0 0%, #0048D3 100%);
-    --mobile-menu-bg: 18, 18, 18;
-    --filter-value: brightness(0) invert(1);
-    --neutral-white: 255, 255, 255;
-    --nav-item-hover-bg: 6,14,25;
-  }
-} */
+
 
 * {
   margin: 0;
@@ -303,63 +287,7 @@ body {
     }
 }
 
-/* Globals Responsive Grid CSS end */
 
-
-
-
-
-
-
-
-
-
-/* ------------------------------------------------------------------------ */
-
-
-/* Template - Globals Responsive Grid CSS start
-
-@media only screen and (min-width: 0px) and (max-width: 320px){
-
-}
-
-@media only screen and (min-width: 321px) and (max-width: 375px){
-
-}
-
-@media only screen and (min-width: 376px) and (max-width: 390px){
-
-}
-
-@media only screen and (min-width: 391px) and (max-width: 554px){
-
-}
-
-@media only screen and (min-width: 555px) and (max-width: 709px){
-
-}
-
-@media only screen and (min-width: 710px) and (max-width: 990px){
-
-}
-
-@media only screen and (min-width: 991px) and (max-width: 1279px){
-
-}
-
-@media only screen and (min-width: 1280px) and (max-width: 1366px){
-
-}
-
-@media only screen and (min-width: 1367px) and (max-width: 1600px){
-
-}
-
-@media only screen and (min-width: 1661px) {
-
-}
-
-Globals Responsive Grid CSS end */
 
 
 .fade-up-wrapper {
@@ -368,7 +296,6 @@ Globals Responsive Grid CSS end */
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-/* Add this to your styles */
 .visibleTransition {
   opacity: 1;
   transform: translateY(0);

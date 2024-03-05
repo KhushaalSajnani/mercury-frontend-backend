@@ -11,7 +11,7 @@ const CareersForm: React.FC = () => {
   const [phoneNumber, setPhoneNumber] = useState<string>('');
   const [valid, setValid] = useState<boolean>(true);
   const [coverLetter, setCoverLetter] = useState<string>('');
-  const [cvFile, setCVFile] = useState('');
+  const [cvFile, setCVFile] = useState<File | string | null>(null);
 
   const handleChange = (value: string) => {
     setPhoneNumber(value);
@@ -36,8 +36,8 @@ const CareersForm: React.FC = () => {
   };
 
   const handleCVFileChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setCVFile(event.target.files[0]);
-  };
+    const file = event.target.files && event.target.files[0];
+    setCVFile(file || null);  };
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
@@ -47,7 +47,7 @@ const CareersForm: React.FC = () => {
     formData.append("email",email);
     formData.append("phone",phoneNumber);
     formData.append("coverletter",coverLetter);
-    formData.append("file",cvFile);
+    formData.append("file",cvFile? cvFile:'');
 
 
 
@@ -56,17 +56,15 @@ const CareersForm: React.FC = () => {
       headers: {'content-type':'multipart/form-data'},
       body: formData
     })*/
-    const res = await axios.post(`http://localhost:3000/api/career-form-api`,formData,{
+    const res = await axios.post(`/careerspage`,formData,{
       headers:{
         'Content-Type':'multipart/form-data'
       }
     })
     if(res.status === 201){
       alert('Success! Your information is received by Mercury-Pay')
-      location.reload();
     }else{
       alert('Sad, the request did not processed' );
-      location.reload();
     }
   };
 
@@ -84,7 +82,7 @@ const CareersForm: React.FC = () => {
             Phone Number:
             <PhoneInput
               country={'ae'}
-              className="phoneNumber"
+              // className="phoneNumber"
               value={phoneNumber}
               onChange={handleChange}
               inputProps={{

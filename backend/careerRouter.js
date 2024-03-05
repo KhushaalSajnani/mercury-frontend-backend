@@ -63,6 +63,7 @@ try {
     };
 
     transporter.sendMail(message).then(() => {
+        console.log('Success')
         return res.status(201).json({
             msg: "you should receive an email"
         })

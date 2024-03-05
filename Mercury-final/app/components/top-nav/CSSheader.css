@@ -60,9 +60,7 @@ header a{
 	font-weight: 700;
 	text-decoration: none;
 }
-/* .header .item-center{
-	flex:0 0 66%;
-} */
+
 .header .item-right{
 	flex:0 0 17%;
 	display: flex;
@@ -99,7 +97,6 @@ header a{
 	margin-top:25px;
 	opacity:0;
 	visibility: hidden;
-	/* display: none; */
 	border-radius: 10px;
 	overflow: hidden;
 }

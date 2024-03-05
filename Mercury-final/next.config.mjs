@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    env: {
-        CAREER_URL: "http://localhost:3000/api/career-form-api",
-    },
+    output: "export"
 };
 
 export default nextConfig;
